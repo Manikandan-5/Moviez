@@ -18,7 +18,7 @@ app.get('/',async(req,res)=>{
 })
 app.use('/api/v1/',movie)
 
-
+mongoose.set('strictQuery',true);
 mongoose.connect(process.env.MONGO_DB).then(()=>{
     console.log("MongoDB Connected");
 }).catch((err)=>{
