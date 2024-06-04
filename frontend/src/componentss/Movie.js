@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 export const Movie = () => {
     const [products, setproducts] = useState([])
     const func=async()=>{
-       await fetch("http://localhost:5000")
+       await fetch("http://localhost:5500")
         .then(res => res.json())
         .then(res=>setproducts(res.products))
         }
@@ -16,12 +16,11 @@ export const Movie = () => {
     },[])
   return (
     <>
-   
-    <Container>
+    <Container >
     <Row className='text-center'>
     {
-        products.map((product)=>{
-            return <Col md={6} lg={4} xs>
+        products.map((product,index)=>{
+            return <Col md={6} lg={4} key={index}>
                 <Movies product={product}/>
     </Col>
         }

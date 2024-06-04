@@ -16,21 +16,18 @@ app.get('/',async(req,res)=>{
         products
     })
 })
-
 app.use('/api/v1/',movie)
 
 
-mongoose.set('strictQuery', true);
-a=mongoose.connect(process.env.MONGO_DB,('strictQuery', false),('strictQuery', true)).then(()=>{
-    app.listen(process.env.PORT,()=>{
-        console.log(`Local Host Succesfully${process.env.PORT}`);
-        console.log("MONGO_DB Conected");
-    })
-})
-.catch((err)=>{
-    console.log(err.message);
+mongoose.connect(process.env.MONGO_DB).then(()=>{
+    console.log("MongoDB Connected");
+}).catch((err)=>{
+    console.log(err.stack);
 })
 
+app.listen(process.env.PORT,()=>{
+    console.log(`Local Host Succesfully${process.env.PORT}`)
+})
 
 
 

@@ -8,8 +8,8 @@ function Movies({product}) {
  const des= product.Plot.length>21?product.Plot.substring(0,50):product.Plot
   return (
     
-    <Card style={{ width: '18rem',marginTop:'10px' }}>
-      <Card.Img variant="top" src={product.Poster} fluid/>
+    <Card style={{ width: '18rem',marginTop:'10px' }} className='s05z'>
+      <Card.Img variant="top" src={product.Poster} />
       <Card.Body>
         <Card.Title>{product.Title}</Card.Title>
         <Card.Text>
@@ -21,7 +21,7 @@ function Movies({product}) {
       <ListGroup className="list-group-flush">
         <ListGroup.Item><h4>Actors : </h4>{product.Actors}</ListGroup.Item>
         <ListGroup.Item><h4>Director : </h4>{product.Director}</ListGroup.Item>
-        <ListGroup.Item><i class="bi bi-star-fill text-warning"></i>{product.imdbRating}/10</ListGroup.Item>
+        <ListGroup.Item><i className="bi bi-star-fill text-warning"></i>{product.imdbRating}/10</ListGroup.Item>
       </ListGroup>
       <Card.Body>
       <ListGroup.Item><h4>{product.movimg}</h4></ListGroup.Item>

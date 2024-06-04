@@ -1,28 +1,27 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Search from './Search';
-import { Movie } from './/Movie';
-import { Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+
 
 export const Home = () => {
   return (
     <>
-    <section id="nav">
-    <Navbar expand="lg">
-      <Container fluid>
-        <Link to='/'className='text-docoration-none'>
-        <Navbar.Brand className='h1 text-white fw-bold'>Moviz.in</Navbar.Brand></Link>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Search/>
-          <Button className='btn btn-success me-3'><i class="bi bi-telephone-fill "></i> 0987654321</Button>
+     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/"><h2 style={{color:'#f04f23'}}>Moviz</h2></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mx-auto">
+            <Nav.Link disabled style={{color:'#f04f23'}}>Home</Nav.Link>
+            <Nav.Link href="#about"><h5 style={{color:'#f04f23'}}>About</h5></Nav.Link>
+            <Nav.Link href="#Follow"><h5 style={{color:'#f04f23'}}>Follow</h5></Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    <Movie/>
-    </section>
+
+
     </>
   )
 }

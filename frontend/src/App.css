@@ -1,5 +1,7 @@
-#nav{
-  background: linear-gradient(#d35380, #883d8b);
+
+
+.s05z{
+  box-shadow: 15px 20px 20px rgba(0, 0,0,.3),
+              inset 4px 4px 10px white;
+  border-radius: 20px !important;
 }
-
-
