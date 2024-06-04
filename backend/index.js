@@ -4,7 +4,7 @@ const movies=require('../backend/models/moviemodel')
 const movie=require('./routes/movie')
 const app=express()
 const cors=require('cors')
-
+const PORT=process.env.PORT || 5500
 require('dotenv').config();
 app.use(express.json())
 app.use(cors())
@@ -25,8 +25,8 @@ mongoose.connect(process.env.MONGO_DB).then(()=>{
     console.log(err.stack);
 })
 
-app.listen(process.env.PORT,()=>{
-    console.log(`Local Host Succesfully${process.env.PORT}`)
+app.listen(PORT,()=>{
+    console.log(`Local Host Succesfully${PORT}`)
 })
 
 
