@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 export const Movie = () => {
     const [products, setproducts] = useState([])
     const func=async()=>{
-       await fetch("http://localhost:5500")
+       await fetch("https://moviez-hgv6.onrender.com")
         .then(res => res.json())
         .then(res=>setproducts(res.products))
         }

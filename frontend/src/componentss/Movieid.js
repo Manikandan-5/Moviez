@@ -14,7 +14,7 @@ export const Movieid = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch("http://localhost:5500/api/v1/movie/" + id);
+        const response = await fetch("https://moviez-hgv6.onrender.com/api/v1/movie/" + id);
         if (!response.ok) {
           throw new Error('Failed to fetch product');
         }
