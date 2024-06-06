@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/',async(req,res)=>{
-    const products=await movie.find({})
+    const products=await movies.find({})
     res.json({
         success:true,
         products
